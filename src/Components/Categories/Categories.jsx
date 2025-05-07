@@ -8,7 +8,7 @@ const Categories = () => {
     console.log(categories)
     return (
         <div>
-            <h3 className='font-bold'>All Categories ({categories.length})</h3>
+            <h3 className='font-bold text-2xl'>All Categories ({categories.length})</h3>
             <div className='grid grid-cols-1 mt-4 gap-4 border-0'>
                 {
                     categories.map(category=>

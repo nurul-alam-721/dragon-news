@@ -1,8 +1,10 @@
 import { FaEye, FaRegBookmark } from 'react-icons/fa';
 import { MdOutlineShare } from 'react-icons/md';
+import { Link } from 'react-router';
 
 const NewsCard = ({ news }) => {
   const {
+    id,
     title,
     author,
     image_url,
@@ -29,7 +31,7 @@ const NewsCard = ({ news }) => {
        </div>
       </div>
 
-      <div className="px-4">
+      <div className="px-4 mt-2">
         <h2 className="font-bold text-lg">{title}</h2>
       </div>
 
@@ -39,7 +41,7 @@ const NewsCard = ({ news }) => {
 
       <div className="px-4 py-3 text-sm text-gray-700">
         {details.slice(0, 200)}...
-        <span className="font-semibold text-orange-400"> Read More</span>
+        <span className="font-semibold text-orange-400"><Link to={`/news-details/${id}`}>Read More</Link></span>
       </div>
 
       <div className="card-actions flex gap-2 justify-between items-center px-4 pb-4 border-t-2 border-base-200 py-2">
